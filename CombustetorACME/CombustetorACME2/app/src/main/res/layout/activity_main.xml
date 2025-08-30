@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lightGray"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Média Veicular"
+        android:textAlignment="center"
+        android:padding="5dp"
+        android:textSize="25dp"
+        android:background="@color/blue"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:text="Carro: " />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtCarro"
+            android:textColor="@color/black"
+            android:layout_marginBottom="5dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KM Inicial"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:id="@+id/txtKMInicial"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="150dp"
+                android:inputType="number"
+                android:id="@+id/edtKMInicial"
+                android:textColor="@color/black"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/txtKMInicial"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KM Final"
+                android:textSize="15dp"
+                android:id="@+id/txtKMFinal"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:layout_alignLeft="@+id/edtKMFinal"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="150dp"
+                android:id="@+id/edtKMFinal"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/txtKMFinal"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Litros Abastecidos:"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtLitros"
+            android:textColor="@color/black"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo de Combustivel:"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spiCombustivel"
+            android:entries="@array/arrCombustivel"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ar-Condicionado:"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ligado"
+                    android:id="@+id/rddLigado"
+                    android:textColor="@color/black"
+                    android:width="150dp"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Desligado"
+                    android:id="@+id/rddDesligado"
+                    android:textColor="@color/black"
+                    android:width="150dp"
+                    android:checked="true"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Carregado com Bagagens?"
+            android:id="@+id/swiBagagens"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:layout_marginTop="5dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calcular"
+                android:id="@+id/btnCalcular"
+                android:layout_marginTop="5dp"
+                android:layout_margin="5dp"
+                android:width="150dp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Novo Cálculo"
+                android:id="@+id/btnNovo"
+                android:layout_marginTop="5dp"
+                android:layout_margin="5dp"
+                android:width="150dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:text="Valor da Média:"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtMedia"
+            android:textColor="@color/black"
+            android:inputType="none"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:text="Status:"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:id="@+id/txtStatus"/>
+    </LinearLayout>
+
+</LinearLayout>

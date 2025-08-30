@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CombustetorACME</string>
+    <string-array name="arrCombustivel">
+        <item>Alcool</item>
+        <item>Gasolina</item>
+        <item>Tundrilium</item>
+    </string-array>
+</resources>
